@@ -1,0 +1,1190 @@
+/*
+Theme Name: SEGUROS
+Theme URL: http://
+Author: Agencia Mixen
+Author URL: http://mixen.mx/
+Description: Tema para el sitio SEGUROS.
+Version: 1.0
+Text Domain: Mixen Communication & Web Technology
+*/
+
+
+
+
+/***** FONTS *****/
+@font-face {
+    font-family: 'Cocogoose';
+    src: url(fonts/Cocogoose.otf);
+}
+
+@font-face {
+    font-family: 'Avian';
+    src: url(fonts/Avian.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+
+/***** GENERAL STYLES *****/
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.spacing {
+    padding: 100px 10px;
+}
+
+.light-spacing {
+    padding: 50px 10px;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.wrapper {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+a {
+    text-decoration: none!important;
+    outline: none!important;
+}
+
+
+
+
+
+/***** NAVBAR *****/
+.navbar {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: url(img/index/icons/nav-bg.jpg) no-repeat center center;
+    background-size: cover;
+    transition: background 500ms ease, height 500ms ease, padding 500ms ease;
+    -webkit-transition: background 500ms ease, height 500ms ease, padding 500ms ease;
+    -moz-transition: background 500ms ease, height 500ms ease, padding 500ms ease;
+    z-index: 99;
+}
+
+.navbar.navbar-fixed-top {
+    position: fixed!important;
+    height: 100px;
+    top: 0px;
+    padding: 10px 0px;
+}
+
+.navbar .container-fluid {
+    position: relative;
+    height: 100%;
+    max-width: 1170px;
+}
+
+.navbar .container-fluid .navbar-header {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+}
+
+.navbar .container-fluid .navbar-header .nav-logo {
+    display: block;
+    height: 80px;
+    padding: 10px 0px;
+}
+
+.navbar .container-fluid .navbar-header .nav-logo img {
+    height: 100%;
+}
+
+.navbar .container-fluid .phone {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    margin-top: 25px;
+    margin-right: 15px;
+}
+
+.navbar .container-fluid .phone p {
+    font-family: 'Cocogoose', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    height: 30px;
+    line-height: 30px;
+    padding-right: 25px;
+}
+
+.navbar .container-fluid .phone p::after,
+.navbar .container-fluid .navbar-collapse .navbar-nav .home::after{
+    position: absolute;
+    display: block;
+    content: '';
+    height: 20px;
+    width: 20px;
+    top: 5px;
+}
+
+.navbar .container-fluid .phone p::after {
+    right: 0;
+    background: url(img/index/icons/email.png) no-repeat center center;
+    background-size: cover;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav .home {
+    padding-left: 25px;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav .home::after {
+    left: 0;
+    background: url(img/index/icons/home.png) no-repeat center center;
+    background-size: cover;
+}
+
+.navbar .container-fluid .navbar-collapse {
+    float: left;
+    text-align: center;
+    border: none;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    height: 80px;
+    left: 0;
+    margin-left: 15px;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav > li {
+    height: 40px;
+    margin-top: 20px;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav > li > a {
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    padding: 5px 10px;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav > li:hover > a,
+.navbar .container-fluid .navbar-collapse .navbar-nav > li:focus > a,
+.navbar .container-fluid .navbar-collapse .navbar-nav > li > a.active {
+    color: rgba(20, 86, 167, 1)!important;
+    background-color: transparent!important;
+}
+
+
+
+
+
+/****** INDEX ******/
+/* BANNER */
+.index .banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.index .banner .carousel {
+    height: calc(100vh - 80px);
+    top: 80px;
+    overflow: hidden;
+}
+
+.index .banner .carousel .carousel-inner,
+.index .banner .carousel .carousel-inner .item,
+.index .banner .carousel .carousel-inner .item .img-container {
+    height: 100%;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .banner-bg {
+    position: relative;
+    height: 100%;
+    min-width: 100%;
+    max-width: none;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.index .banner .carousel .container {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.index .banner .carousel .container .cotiza {
+    position: absolute;
+    text-align: center;
+    height: 250px;
+    width: 380px;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px 25px;
+    border-radius: 8px;
+    background: url(img/index/banner/cotiza-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .banner .carousel .container .cotiza h2,
+.index .banner .carousel .container .cotiza p,
+.index .banner .carousel .container .cotiza select,
+.index .banner .carousel .container .cotiza button {
+    width: 100%;
+}
+
+.index .banner .carousel .container .cotiza select,
+.index .banner .carousel .container .cotiza button {
+    outline: none!important;
+}
+
+.index .banner .carousel .container .cotiza h2,
+.index .banner .carousel .container .cotiza button {
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.index .banner .carousel .container .cotiza p,
+.index .banner .carousel .container .cotiza select {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.index .banner .carousel .container .cotiza p {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 25px;
+}
+
+.index .banner .carousel .container .cotiza select {
+    color: rgba(0, 0, 0, 1);
+    height: 35px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.index .banner .carousel .container .cotiza button {
+    line-height: 45px;
+    height: 45px;
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(236, 32, 43, 1);
+}
+
+
+/* NOSOTROS */
+.index .nosotros {
+    background: url(img/index/nosotros/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .nosotros .container {
+    text-align: center;
+}
+
+.index .nosotros .container h1 {
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: rgba(70, 70, 70, 1);
+}
+
+.index .nosotros .container p,
+.index .nosotros .container .tab-content .tab-pane p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(120, 120, 120, 1);
+}
+
+.index .nosotros .container .nav-tabs {
+    display: flex;
+}
+
+.index .nosotros .container .nav-tabs li {
+    flex: 1;
+}
+
+.index .nosotros .container .nav-tabs li > a {
+    padding: 20px 0px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    text-decoration: none!important;
+}
+
+.index .nosotros .container .nav-tabs li > a.active,
+.index .nosotros .container .nav-tabs li > a:hover,
+.index .nosotros .container .nav-tabs li > a:focus {
+    background-color: rgba(150, 150, 150, 0.25);
+}
+
+.index .nosotros .container .nav-tabs li > a > .img-container {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.index .nosotros .container .nav-tabs li > a > .img-container::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -8px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    border-radius: 50%;
+    border: 9px solid rgba(236, 32, 43, 0.75);
+}
+
+.index .nosotros .container .nav-tabs li > a > .img-container img {
+    height: 100%;
+    width: 100%;
+    padding: 8px 8px;
+    border-radius: 50%;
+    background-color: rgba(236, 32, 43, 1);
+}
+
+.index .nosotros .container .tab-content .tab-pane h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(95, 95, 95, 1);
+}
+
+.index .nosotros .container .tab-content .tab-pane p {
+    font-size: 16px;
+}
+
+
+/* SEGUROS */
+.index .seguros {
+    background: url(img/index/seguros/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .seguros .container .col-sm-4 {
+    text-align: center;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.index .seguros .container .col-sm-4 img {
+    max-width: 100%;
+}
+
+
+/* CONTACTANOS */
+.index .contactanos-top {
+    text-align: center;
+    background: url(img/index/contactanos/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .contactanos-top .container h1,
+.index .contactanos-top .container p {
+    color: rgba(70, 70, 70, 1);
+}
+
+.index .contactanos-top .container h1 {
+    position: relative;
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.index .contactanos-top .container h1::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(215, 215, 215, 1);
+}
+
+.index .contactanos-top .container p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.index .contactanos-bottom {
+    background: url(img/index/contactanos/bg2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .contactanos-bottom .container .form-container form {
+    text-align: center;
+}
+
+.index .contactanos-bottom .container .form-container form input[type=text],
+.index .contactanos-bottom .container .form-container form input[type=email],
+.index .contactanos-bottom .container .form-container form input[type=submit],
+.index .contactanos-bottom .container .form-container form textarea {
+    font-family: 'Avian', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 60%;
+    margin-bottom: 10px;
+    border: none;
+    outline: none!important;
+}
+
+.index .contactanos-bottom .container .form-container form input[type=text],
+.index .contactanos-bottom .container .form-container form input[type=email],
+.index .contactanos-bottom .container .form-container form input[type=submit] {
+    height: 50px;
+}
+
+.index .contactanos-bottom .container .form-container form input[type=text],
+.index .contactanos-bottom .container .form-container form input[type=email],
+.index .contactanos-bottom .container .form-container form textarea {
+    padding: 0px 10px;
+}
+
+.index .contactanos-bottom .container .form-container form textarea {
+    padding: 10px 10px;
+}
+
+.index .contactanos-bottom .container .form-container form input[type=submit] {
+    font-family: 'Avian', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(236, 32, 43, 1);
+}
+
+
+
+
+
+/***** COTIZA-PAGE *****/
+/* BANNER */
+.cotiza-vida .banner {
+    height: 500px;
+    margin-top: 80px;
+    background: url(img/cotiza/seguros/banner-vida.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cotiza-vida .banner .container {
+    position: relative;
+    height: 100%;
+}
+
+.cotiza-vida .banner .container h1 {
+    position: absolute;
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 1);
+    bottom: 35px;
+}
+
+/* CONTENIDO */
+.cotiza-vida .contenido {
+    background: url(img/cotiza/seguros/bg-lg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cotiza-vida .contenido .container {
+    position: relative;
+}
+
+.cotiza-vida .contenido .container .left-side {
+    font-family: 'Avian', sans-serif;
+}
+
+.cotiza-vida .contenido .container .left-side h1 {
+    font-weight: 500;
+    font-size: 28px;
+    color: rgba(55, 55, 55, 1);
+    margin-bottom: 25px;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form {
+    text-align: center;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form input[type=text],
+.cotiza-vida .contenido .container .left-side .form-container form input[type=email],
+.cotiza-vida .contenido .container .left-side .form-container form select
+{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(166, 166, 166, 1);
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid rgba(125, 125, 125, 1);
+    outline: none!important;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form > .genero {
+    display: flex;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form > .genero p {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(166, 166, 166, 1);
+    line-height: 45px;
+    height: 45px;
+    padding: 0px 10px;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form > .genero input[type=radio] {
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form > .autorizo {
+    display: flex;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form > .autorizo input[type=checkbox] {
+    height: auto;
+    width: 75px;
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form > .autorizo p {
+    text-align: justify;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgba(75, 75, 75, 1);
+}
+
+.cotiza-vida .contenido .container .left-side .form-container form input[type=submit] {
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    height: 35px;
+    width: 135px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(236, 32, 43, 1);
+    outline: none!important;
+}
+
+.cotiza-vida .contenido .container .right-side {
+    font-family: 'Avian', sans-serif;
+}
+
+.cotiza-vida .contenido .container .right-side p {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.cotiza-vida .contenido .container .right-side span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.cotiza-vida .contenido .container .left-side {
+    padding-right: 75px;
+}
+
+.cotiza-vida .contenido .container .right-side {
+    padding-left: 75px;
+}
+
+.cotiza-vida .contenido .container .logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.cotiza-vida .contenido .container .logo .img-container {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.cotiza-vida .contenido .container .logo .img-container::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: -8px;
+    left: -8px;
+    height: calc(100% + 16px);
+    width: calc(100% + 16px);
+    clip: rect(0px,116px,116px,58px);
+    border: 9px solid rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+}
+
+.cotiza-vida .contenido .container .logo .img-container img {
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: rgba(236, 32, 43, 1);
+}
+
+
+
+
+
+/***** PIE *****/
+.pie {
+    background: url(img/index/nosotros/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.pie .container .col-xs-6,
+.pie .container .col-xs-3 {
+    height: 200px;
+}
+
+.pie .container .col-xs-6 .img-container {
+    text-align: center;
+    height: 80%;
+    overflow: hidden;
+}
+
+.pie .container .col-xs-6 .img-container img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.pie .container .left-side .content a {
+    display: block;
+    font-family: 'Avian', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(20, 86, 167, 1);
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+}
+
+.pie .container .left-side .content a:hover {
+    color: rgba(20, 86, 167, 0.6);
+}
+
+.pie .container .right-side .col-xs-6 {
+    height: 50px;
+}
+
+.pie .container .right-side .col-xs-6 img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.pie .container .right-side .left-logo {
+    text-align: right;
+}
+
+.pie .container .right-side .right-logo {
+    text-align: left;
+}
+
+
+
+
+/***** FOOTER *****/
+footer {
+    font-family: 'Avian', sans-serif;
+    background: url(img/index/footer/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+footer .footer-rights {
+    padding: 10px 0;
+}
+
+footer .footer-rights p {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+}
+
+footer .footer-rights a {
+    text-decoration: none!important;
+    color: rgba(200, 200, 200, 1);
+}
+
+footer .footer-rights a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+/***** Parallax CSS *****/
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    height: auto;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.parallax img {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    min-width: 1920px;
+    min-height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+
+
+
+
+/***** RESPONSIVE *****/
+@media(max-width: 1200px) {
+    /***** GENERAL STYLES *****/
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 992px) {
+    /***** GENERAL STYLES *****/
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 33px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+
+
+    /***** NAVBAR *****/
+    .navbar .container-fluid .navbar-header .nav-logo {
+        padding: 18px 0px;
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav > li > a {
+        padding: 5px 8px;
+    }
+}
+
+@media(max-width: 767px) {
+    /***** GENERAL STYLES *****/
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+
+
+    /***** NAVBAR *****/
+    .navbar {
+        height: 50px;
+    }
+    .navbar.navbar-fixed-top {
+        position: fixed!important;
+        height: 60px;
+        top: 0px;
+        padding: 10px 0px;
+    }
+    .navbar .container-fluid .navbar-header {
+        display: flex;
+        height: auto;
+        left: 0;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+    }
+    .navbar .container-fluid .navbar-header .nav-logo {
+        flex: 1;
+        display: block;
+        height: 50px;
+        width: 50px;
+        padding: 8px 0px;
+    }
+    .navbar .container-fluid .navbar-header .nav-logo img {
+        height: 100%;
+    }
+    .navbar .container-fluid .phone {
+        width: 150px;
+        top: -15px;
+        left: 0;
+        margin-left: 15px;
+        margin-right: 0;
+    }
+    .navbar .container-fluid .phone p {
+        font-size: 14px;
+        padding: 0;
+    }
+    .navbar .container-fluid .phone p::after,
+    .navbar .container-fluid .navbar-collapse .navbar-nav .home::after{
+        display: none;
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav .home {
+        padding-left: 0px;
+    }
+    .navbar .container-fluid .navbar-collapse {
+        float: none;
+        text-align: center;
+        height: auto;
+        border: none;
+        background-color: rgba(0, 174, 228, 0.5);
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav {
+        position: relative;
+        height: auto;
+        margin-top: 20px;
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav > li {
+        height: auto;
+        margin-top: 5px;
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav > li > a {
+        font-size: 14px;
+        padding: 3px 0px;
+    }
+
+
+    /****** INDEX ******/
+    /* BANNER */
+    .index .banner .carousel {
+        height: calc(100vh - 50px);
+        top: 50px;
+    }
+    .index .banner .carousel .container .cotiza h2,
+    .index .banner .carousel .container .cotiza button {
+        font-size: 24px;
+    }
+    .index .banner .carousel .container .cotiza p,
+    .index .banner .carousel .container .cotiza select {
+        font-size: 16px;
+    }
+    .index .banner .carousel .container .cotiza p {
+        margin-bottom: 20px;
+    }
+    .index .banner .carousel .container .cotiza select {
+        height: 30px;
+        width: 85%;
+    }
+    .index .banner .carousel .container .cotiza button {
+        line-height: 40px;
+        height: 40px;
+        width: 85%;
+    }
+
+    /* NOSOTROS */
+    .index .nosotros .container h1 {
+        font-size: 24px;
+    }
+    .index .nosotros .container p,
+    .index .nosotros .container .tab-content .tab-pane p {
+        font-size: 16px;
+    }
+    .index .nosotros .container .nav-tabs li > a {
+        padding: 15px;
+    }
+    .index .nosotros .container .tab-content .tab-pane h2 {
+        font-size: 22px;
+    }
+    .index .nosotros .container .tab-content .tab-pane p {
+        font-size: 14px;
+    }
+
+    /* CONTACTANOS */
+    .index .contactanos-top .container h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .index .contactanos-top .container p {
+        font-size: 16px;
+    }
+    .index .contactanos-bottom .container .form-container form input[type=text],
+    .index .contactanos-bottom .container .form-container form input[type=email],
+    .index .contactanos-bottom .container .form-container form input[type=submit],
+    .index .contactanos-bottom .container .form-container form textarea {
+        font-size: 14px;
+    }
+    .index .contactanos-bottom .container .form-container form input[type=text],
+    .index .contactanos-bottom .container .form-container form input[type=email],
+    .index .contactanos-bottom .container .form-container form input[type=submit] {
+        height: 35px;
+    }
+    .index .contactanos-bottom .container .form-container form input[type=submit] {
+        font-size: 22px;
+    }
+
+
+    /***** COTIZA-PAGE *****/
+    /* BANNER */
+    .cotiza-vida .banner {
+        height: 300px;
+        margin-top: 50px;
+    }
+    .cotiza-vida .banner .container h1 {
+        font-size: 35px;
+        bottom: 15px;
+    }
+
+    /* CONTENIDO */
+    .cotiza-vida .contenido {
+        background: none;
+        overflow: hidden;
+    }
+    .cotiza-vida .contenido .container .left-side h1 {
+        font-size: 24px;
+    }
+    .cotiza-vida .contenido .container .left-side .form-container form input[type=text],
+    .cotiza-vida .contenido .container .left-side .form-container form input[type=email],
+    .cotiza-vida .contenido .container .left-side .form-container form select
+    {
+        font-weight: 500;
+        font-size: 14px;
+        height: 40px;
+    }
+    .cotiza-vida .contenido .container .left-side .form-container form > .genero {
+        height: 40px;
+    }
+    .cotiza-vida .contenido .container .left-side .form-container form > .genero p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 40px;
+        height: 40px;
+    }
+    .cotiza-vida .contenido .container .left-side .form-container form > .genero input[type=radio] {
+        height: 22px;
+        width: 22px;
+        margin-top: 10px;
+    }
+    .cotiza-vida .contenido .container .left-side .form-container form > .autorizo p {
+        font-weight: 700;
+        font-size: 11px;
+    }
+    .cotiza-vida .contenido .container .left-side .form-container form input[type=submit] {
+        font-size: 16px;
+        height: 35px;
+        width: 110px;
+    }
+    .cotiza-vida .contenido .container .right-side {
+        position: relative;
+    }
+    .cotiza-vida .contenido .container .right-side img {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        top: 0;
+        left: -15px;
+    }
+    .cotiza-vida .contenido .container .right-side p {
+        position: relative;
+        font-weight: 500;
+        font-size: 14px;
+        padding-top: 25px;
+    }
+    .cotiza-vida .contenido .container .right-side span {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .cotiza-vida .contenido .container .left-side {
+        padding: 15px;
+    }
+    .cotiza-vida .contenido .container .right-side {
+        padding: 15px;
+    }
+    .cotiza-vida .contenido .container .logo {
+        display: none;
+    }
+
+
+    /***** PIE *****/
+    .pie .container .col-xs-6,
+    .pie .container .col-xs-3 {
+        height: 150px;
+    }
+    .pie .container .left-side .content a {
+        font-size: 12px;
+    }
+    .pie .container .right-side .col-xs-6 {
+        height: 50px;
+        padding: 5px;
+    }
+    .pie .container .right-side .col-xs-6 img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 550px) {
+    /***** NAVBAR *****/
+    .navbar .container-fluid .navbar-header .nav-logo {
+        padding: 13px 0px;
+    }
+    .navbar .container-fluid .phone {
+        width: 100px;
+    }
+    .navbar .container-fluid .phone p {
+        font-size: 10px;
+    }
+
+
+    /****** INDEX ******/
+    /* BANNER */
+    .index .banner .carousel .container .cotiza {
+        width: 300px;
+    }
+
+    /* NOSOTROS */
+    .index .nosotros .container p {
+        margin-bottom: 25px;
+    }
+    .index .nosotros .container .nav-tabs li > a {
+        padding: 10px;
+    }
+    .index .nosotros .container .nav-tabs li > a > .img-container {
+        height: 50px;
+        width: 50px;
+    }
+    .index .nosotros .container .nav-tabs li > a > .img-container::before {
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border: 5px solid rgba(236, 32, 43, 0.75);
+    }
+    .index .nosotros .container .nav-tabs li > a > .img-container img {
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+    }
+    .index .nosotros .container .tab-pane p {
+        margin-bottom: 0;
+    }
+
+    /* CONTACTANOS */
+    .index .contactanos-top .container h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .index .contactanos-top .container p {
+        font-size: 16px;
+    }
+    .index .contactanos-bottom .container .form-container form input[type=text],
+    .index .contactanos-bottom .container .form-container form input[type=email],
+    .index .contactanos-bottom .container .form-container form input[type=submit],
+    .index .contactanos-bottom .container .form-container form textarea {
+        font-size: 14px;
+    }
+    .index .contactanos-bottom .container .form-container form input[type=text],
+    .index .contactanos-bottom .container .form-container form input[type=email],
+    .index .contactanos-bottom .container .form-container form input[type=submit] {
+        height: 35px;
+    }
+    .index .contactanos-bottom .container .form-container form input[type=submit] {
+        font-size: 22px;
+    }
+
+
+    /***** PIE *****/
+    .pie .container .col-xs-6,
+    .pie .container .col-xs-3 {
+        height: 150px;
+    }
+    .pie .container .left-side .content a {
+        font-size: 12px;
+    }
+    .pie .container .right-side .col-xs-6 {
+        height: 50px;
+        padding: 5px;
+    }
+    .pie .container .right-side .col-xs-6 img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
