@@ -1,6 +1,6 @@
 <?php $page = 'cotiza-seguro'; ?>
 <?php include('header.php'); ?>
-<div class="wrapper cotiza-seguro vida" id="cotiza-seguro vida">
+<div class="wrapper cotiza-seguro hogar" id="cotiza-seguro hogar">
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
     <!--/* BANNER */-->
@@ -9,7 +9,7 @@
     <div class="banner" id="banner">
         <div class="container">
             <h1>
-                Seguro de Vida
+                Seguro de Hogar y Negocio
             </h1>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="container spacing">
             <div class="logo vertical-align">
                 <div class="img-container">
-                    <img src="img/index/icons/healt.png" alt="">
+                    <img src="img/index/icons/house.png" alt="">
                 </div>
             </div>
             <div class="col-sm-6 left-side">
@@ -31,38 +31,48 @@
                 </h1>
                 <div class="form-container">
                     <form action="mailer.php" method="POST" id="form">
-                        <div class="col-sm-6 left-side">
-                            <input type="text" name="name" id="name" placeholder="Nombre" required="">
-                        </div>
-                        <div class="col-sm-6 right-side">
-                            <input type="text" name="lastname" id="lastname" placeholder="Apellido" required="">
-                        </div>
+                        <input type="text" name="name" id="name" placeholder="Nombre" required="">
+                        <input type="text" name="lastname" id="lastname" placeholder="Apellido" required="">
                         <input type="email" name="email" id="email" placeholder="Correo electrónico" required="">
                         <input type="text" name="phone" id="phone" placeholder="Lada + Teléfono" required="">
-                        <input type="text" name="fecha" id="fecha" placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" required="">
                         <div class="opciones">
                             <div class="col-xs-12">
                                 <p>
-                                    Genero:
+                                    Seguro para:
                                 </p>
                                 <p>
-                                    H
+                                    Hogar
                                 </p>
-                                <input type="radio" name="gender" id="gender1" value="hombre" required="">
+                                <input type="radio" name="inmueble" id="inmueble1" value="hogar" required="">
                                 <p>
-                                    M
+                                    Negocio
                                 </p>
-                                <input type="radio" name="gender" id="gender2" value="mujer">
+                                <input type="radio" name="inmueble" id="inmueble2" value="negocio">
                             </div>
                         </div>
-                        <input type="number" name="suma" id="suma" placeholder="Suma asegurada" required="">
-                        <div class="tool-tip">
-                            <span href="#" data-toggle="tooltip" title="La Suma Asegurada es la cantidad por la cual se desea asegurar en caso de fallecimiento. (Ej. $100,000.00)">
-                                *¿Suma Asegurada?
-                            </span>
+                        <p>
+                            Datos del Inmueble:
+                        </p>
+                        <div class="col-sm-6 left-side">
+                            <input type="text" name="estado" id="estado" placeholder="Estado/Municipio" required="">
+                        </div>
+                        <div class="col-sm-6 right-side">
+                            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" required="">
+                        </div>
+                        <div class="col-sm-6 left-side">
+                            <input type="text" name="direccion" id="direccion" placeholder="Dirección (Calle y Numero)" required="">
+                        </div>
+                        <div class="col-sm-6 right-side">
+                            <input type="number" name="cp" id="cp" placeholder="Código Postal" required="">
+                        </div>
+                        <div class="col-sm-6 left-side">
+                            <input type="text" name="colonia" id="colonia" placeholder="Colonia" required="">
+                        </div>
+                        <div class="col-sm-6 right-side">
+                            <input type="number" name="valor" id="valor" placeholder="Valor del Inmueble" required="">
                         </div>
                         <div class="text-right">
-                            <input type="hidden" name="bttnVida">
+                            <input type="hidden" name="bttnHogar">
                             <input type="submit" name="form-submit" id="form-submit" value="COTIZA">
                         </div>
                         <div class="text-left">
@@ -78,11 +88,14 @@
             <div class="col-sm-6 right-side">
                 <img src="img/cotiza/seguros/bg.jpg" alt="" class="hidden-lg hidden-md hidden-sm">
                 <p>
-                    <span>Un seguro que todos deberían de tener,</span> pero pocos
-                    contratan.<br>
-                    El seguro de vida te protege a ti y a los que más quieres a un
-                    costo accesible. Te ofrece el apoyo que necesitas en los momentos
-                    más difíciles y protección para tu familia cuando llegues a faltar.
+                    <span>Sabemos lo mucho que te importa tu casa </span> y el esfuerzo que
+                    te ha costado obtenerla, con nuestros planes de protección a hogar tu
+                    patrimonio estará protegido ante cualquier imprevisto o eventualidad.
+                    <br>
+                    <br>
+                    Un seguro de bajo costo que cubre a propietarios y arrendatarios de
+                    cualquier riesgo que afecte a tu inmueble o lo que se encuéntre dentro
+                    de el.
                 </p>
             </div>
         </div>

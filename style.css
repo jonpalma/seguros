@@ -107,23 +107,20 @@ a {
     max-width: 1170px;
 }
 
-.navbar .container-fluid .navbar-header {
-    position: relative;
-    text-align: center;
+.navbar .container-fluid .nav-logo {
+    position: absolute;
+    display: block;
+    height: 80px;
+    width: 120px;
+    padding: 10px 0px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
 }
 
-.navbar .container-fluid .navbar-header .nav-logo {
-    display: block;
-    height: 80px;
-    padding: 10px 0px;
-}
-
-.navbar .container-fluid .navbar-header .nav-logo img {
-    height: 100%;
+.navbar .container-fluid .nav-logo img {
+    width: 100%;
 }
 
 .navbar .container-fluid .phone {
@@ -222,31 +219,89 @@ a {
 }
 
 .index .banner .carousel {
-    height: calc(100vh - 80px);
-    top: 80px;
     overflow: hidden;
 }
 
+.index .banner .carousel,
 .index .banner .carousel .carousel-inner,
-.index .banner .carousel .carousel-inner .item,
-.index .banner .carousel .carousel-inner .item .img-container {
+.index .banner .carousel .carousel-inner .item {
     height: 100%;
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .banner-bg {
+.index .banner .carousel .carousel-inner .item .img-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container img {
     position: relative;
     height: 100%;
     min-width: 100%;
     max-width: none;
     left: 50%;
+    transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .texto {
+    position: absolute;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 15px;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .texto span.big {
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .texto span.small {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .texto span.black {
+    font-weight: 700;
+    font-size: 34px;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 1px 0 0 #fff,
+        -1px 0 0 #fff,
+        0 1px 0 #fff,
+        0 -1px 0 #fff,
+        1px 1px #fff,
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .texto span.red {
+    color: rgba(234, 0, 0, 1);
+    text-shadow: 1px 0 0 #fff,
+        -1px 0 0 #fff,
+        0 1px 0 #fff,
+        0 -1px 0 #fff,
+        1px 1px #fff,
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff;
+}
+
+.index .banner .carousel .carousel-inner .item .img-container .texto span.white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.index .banner .carousel .carousel-control {
+    z-index: 1
 }
 
 .index .banner .carousel .container {
     position: absolute;
-    height: 100%;
+    height: 100vh;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -254,11 +309,10 @@ a {
 }
 
 .index .banner .carousel .container .cotiza {
-    position: absolute;
+    position: relative;
     text-align: center;
     height: 250px;
     width: 380px;
-    top: 150px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -340,6 +394,11 @@ a {
     font-weight: 500;
     font-size: 18px;
     color: rgba(120, 120, 120, 1);
+}
+
+.index .nosotros .container p > span {
+    font-weight: 700;
+    color: rgba(70, 70, 70, 1);
 }
 
 .index .nosotros .container .nav-tabs {
@@ -463,6 +522,23 @@ a {
     font-size: 18px;
 }
 
+.index .contactanos-top .container a {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(70, 70, 70, 1);
+    height: 28px;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+}
+
+.index .contactanos-top .container a:hover {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
 .index .contactanos-bottom {
     background: url(img/index/contactanos/bg2.jpg) no-repeat center center;
     background-size: cover;
@@ -509,25 +585,96 @@ a {
     background-color: rgba(236, 32, 43, 1);
 }
 
+.index .contactanos-bottom .container .form-container form .form-output {
+    height: 50px;
+}
+
+
+
+
+
+/***** PAGE-FAQS *****/
+.page-faqs .faqs .titulo {
+    padding-top: 125px;
+    background: url(img/index/seguros/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.page-faqs .faqs .titulo .container h1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 30px;
+}
+
+.page-faqs .faqs .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-faqs .faqs .container h2,
+.page-faqs .faqs .container h3,
+.page-faqs .faqs .container p {
+    font-family: 'Cocogoose', sans-serif;
+    font-weight: 500;
+    color: rgba(70, 70, 70, 1);
+}
+
+.page-faqs .faqs .container h2 {
+    font-size: 26px;
+    color: rgba(20, 86, 167, 1);
+    margin-top: 50px;
+}
+
+.page-faqs .faqs .container h3 {
+    font-size: 22px;
+}
+
+.page-faqs .faqs .container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
 
 
 
 
 /***** COTIZA-PAGE *****/
 /* BANNER */
-.cotiza-vida .banner {
+.cotiza-seguro .banner {
     height: 500px;
     margin-top: 80px;
+}
+
+.cotiza-seguro.auto .banner {
+    background: url(img/cotiza/seguros/banner-auto.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cotiza-seguro.hogar .banner {
+    background: url(img/cotiza/seguros/banner-hogar.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cotiza-seguro.salud .banner {
+    background: url(img/cotiza/seguros/banner-salud.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cotiza-seguro.vida .banner {
     background: url(img/cotiza/seguros/banner-vida.jpg) no-repeat center center;
     background-size: cover;
 }
 
-.cotiza-vida .banner .container {
+.cotiza-seguro .banner .container {
     position: relative;
     height: 100%;
 }
 
-.cotiza-vida .banner .container h1 {
+.cotiza-seguro .banner .container h1 {
     position: absolute;
     font-family: 'Cocogoose', sans-serif;
     font-weight: 500;
@@ -537,33 +684,48 @@ a {
 }
 
 /* CONTENIDO */
-.cotiza-vida .contenido {
+.cotiza-seguro .contenido {
     background: url(img/cotiza/seguros/bg-lg.jpg) no-repeat center center;
     background-size: cover;
 }
 
-.cotiza-vida .contenido .container {
+.cotiza-seguro .contenido .container {
     position: relative;
 }
 
-.cotiza-vida .contenido .container .left-side {
+.cotiza-seguro .contenido .container .left-side {
     font-family: 'Avian', sans-serif;
 }
 
-.cotiza-vida .contenido .container .left-side h1 {
+.cotiza-seguro .contenido .container .left-side h1 {
     font-weight: 500;
     font-size: 28px;
     color: rgba(55, 55, 55, 1);
     margin-bottom: 25px;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form {
+.cotiza-seguro .contenido .container .left-side .form-container form {
     text-align: center;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form input[type=text],
-.cotiza-vida .contenido .container .left-side .form-container form input[type=email],
-.cotiza-vida .contenido .container .left-side .form-container form select
+.cotiza-seguro .contenido .container .left-side .form-container form .col-sm-6 {
+    padding: 0;
+}
+
+.cotiza-seguro .contenido .container .left-side .form-container form .left-side {
+    padding-right: 5px;
+}
+
+.cotiza-seguro .contenido .container .left-side .form-container form .right-side {
+    padding-left: 5px;
+}
+
+.cotiza-seguro .contenido .container .left-side .form-container form input[type=text],
+.cotiza-seguro .contenido .container .left-side .form-container form input[type=email],
+.cotiza-seguro .contenido .container .left-side .form-container form input[type=number],
+.cotiza-seguro .contenido .container .left-side .form-container form input[type=date],
+.cotiza-seguro .contenido .container .left-side .form-container form textarea,
+.cotiza-seguro .contenido .container .left-side .form-container form select
 {
     font-weight: 500;
     font-size: 16px;
@@ -576,13 +738,21 @@ a {
     outline: none!important;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form > .genero {
+.cotiza-seguro .contenido .container .left-side .form-container form textarea {
+    height: auto;
+}
+
+.cotiza-seguro .contenido .container .left-side .form-container form > .opciones .col-xs-12 {
+    padding: 0;
+}
+
+.cotiza-seguro .contenido .container .left-side .form-container form > .opciones .col-xs-12 {
     display: flex;
     height: 45px;
     margin-bottom: 10px;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form > .genero p {
+.cotiza-seguro .contenido .container .left-side .form-container form > .opciones .col-xs-12 p {
     font-weight: 500;
     font-size: 16px;
     color: rgba(166, 166, 166, 1);
@@ -591,31 +761,44 @@ a {
     padding: 0px 10px;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form > .genero input[type=radio] {
-    height: 25px;
-    width: 25px;
-    margin-top: 10px;
+.cotiza-seguro .contenido .container .left-side .form-container form > .opciones .col-xs-12 input[type=radio]{
+    height: 18px;
+    width: 18px;
+    margin-top: 13px;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form > .autorizo {
-    display: flex;
-    height: auto;
+.cotiza-seguro .contenido .container .left-side .form-container form .tool-tip {
+    text-align: left;
+    height: 20px;
+    margin-top: -5px;
     margin-bottom: 10px;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form > .autorizo input[type=checkbox] {
-    height: auto;
-    width: 75px;
+.cotiza-seguro .contenido .container .left-side .form-container form .tool-tip span {
+    position: relative;
+    font-size: 13px;
+    color: rgba(171, 2, 34, 1)!important;
+    text-decoration: none!important;
+    outline: none!important;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form > .autorizo p {
-    text-align: justify;
-    font-weight: 700;
-    font-size: 12px;
-    color: rgba(75, 75, 75, 1);
+.cotiza-seguro .contenido .container .left-side .form-container form .tool-tip span::before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 20px;
+    width: 20px;
+    top: 0;
+    right: -22px;
+    background: url(img/cotiza/icons/click.png) no-repeat center center;
+    background-size: cover;
 }
 
-.cotiza-vida .contenido .container .left-side .form-container form input[type=submit] {
+.cotiza-seguro .contenido .container .left-side .form-container form textarea.asegurados {
+    display: none;
+}
+
+.cotiza-seguro .contenido .container .left-side .form-container form input[type=submit] {
     font-family: 'Cocogoose', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -628,37 +811,111 @@ a {
     outline: none!important;
 }
 
-.cotiza-vida .contenido .container .right-side {
+.cotiza-seguro .form-output {
+    height: 50px;
+    margin-top: 15px;
+}
+
+
+.cotiza-seguro .contenido .container .right-side {
     font-family: 'Avian', sans-serif;
 }
 
-.cotiza-vida .contenido .container .right-side p {
+.cotiza-seguro .contenido .container .right-side p {
     font-weight: 500;
     font-size: 18px;
     color: rgba(255, 255, 255, 1);
 }
 
-.cotiza-vida .contenido .container .right-side span {
+.cotiza-seguro .contenido .container .right-side span {
     font-weight: 700;
     font-size: 20px;
 }
 
-.cotiza-vida .contenido .container .left-side {
+.cotiza-seguro .contenido .container .right-side span.bold {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(15, 15, 15, 1);
+}
+
+.cotiza-seguro .contenido .container .right-side table {
+    position: relative;
+    font-family: 'Avian', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+.cotiza-seguro .contenido .container .right-side td, th {
+    text-align: left;
+    padding: 5px;
+    border: 1px solid rgba(50, 50, 50, 1);
+}
+
+.cotiza-seguro .contenido .container .right-side tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.cotiza-seguro .contenido .container .right-side tr:nth-child(2) {
+    background-color: transparent;
+}
+
+.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(1) {
+    border: 0px solid;
+}
+
+.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(2) {
+    border-right: 0px solid;
+}
+
+.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(3) {
+    border-left: 0px solid;
+    border-right: 0px solid;
+}
+
+.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(4) {
+    border-left: 0px solid;
+}
+
+.cotiza-seguro .contenido .container .right-side .tbl-salud tr:nth-child(1) > th:nth-child(4) {
+    border-left: 0px solid;
+    border-right: 0px solid;
+}
+
+.cotiza-seguro .contenido .container .right-side .tbl-salud tr:nth-child(1) > th:nth-child(5) {
+    border-left: 0px solid;
+}
+
+.cotiza-seguro .contenido .container .right-side .tbl-salud {
+    font-size: 15px;
+    width: 100%;
+}
+
+.cotiza-seguro .contenido .container .right-side .tbl-salud td, th {
+    text-align: left;
+    padding: 2px;
+    border: 1px solid rgba(50, 50, 50, 1);
+}
+
+.cotiza-seguro .contenido .container .left-side {
     padding-right: 75px;
 }
 
-.cotiza-vida .contenido .container .right-side {
+.cotiza-seguro .contenido .container .right-side {
     padding-left: 75px;
 }
 
-.cotiza-vida .contenido .container .logo {
+.cotiza-seguro .contenido .container .logo {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
 }
 
-.cotiza-vida .contenido .container .logo .img-container {
+.cotiza-seguro .contenido .container .logo .img-container {
     position: relative;
     height: 100px;
     width: 100px;
@@ -669,7 +926,7 @@ a {
     border-radius: 50%;
 }
 
-.cotiza-vida .contenido .container .logo .img-container::before {
+.cotiza-seguro .contenido .container .logo .img-container::before {
     position: absolute;
     display: block;
     content: '';
@@ -682,7 +939,7 @@ a {
     border-radius: 50%;
 }
 
-.cotiza-vida .contenido .container .logo .img-container img {
+.cotiza-seguro .contenido .container .logo .img-container img {
     height: 100%;
     width: 100%;
     padding: 10px 10px;
@@ -850,6 +1107,28 @@ footer .footer-rights a:hover {
     .navbar .container-fluid .navbar-collapse .navbar-nav > li > a {
         padding: 5px 8px;
     }
+
+
+    /***** COTIZA-PAGE *****/
+    /* CONTENIDO */
+    .cotiza-seguro .contenido .container .right-side table {
+        font-size: 12px;
+        width: 100%;
+    }
+    .cotiza-seguro .contenido .container .right-side td, th {
+        text-align: left;
+        padding: 2px;
+        border: 1px solid rgba(50, 50, 50, 1);
+    }
+    .cotiza-seguro .contenido .container .right-side .tbl-salud {
+        font-size: 11px;
+        width: 100%;
+    }
+    .cotiza-seguro .contenido .container .right-side .tbl-salud td, th {
+        text-align: left;
+        padding: 1px;
+        border: 1px solid rgba(50, 50, 50, 1);
+    }
 }
 
 @media(max-width: 767px) {
@@ -875,23 +1154,11 @@ footer .footer-rights a:hover {
         top: 0px;
         padding: 10px 0px;
     }
-    .navbar .container-fluid .navbar-header {
-        display: flex;
-        height: auto;
-        left: 0;
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-    }
-    .navbar .container-fluid .navbar-header .nav-logo {
-        flex: 1;
+    .navbar .container-fluid .nav-logo {
         display: block;
         height: 50px;
-        width: 50px;
-        padding: 8px 0px;
-    }
-    .navbar .container-fluid .navbar-header .nav-logo img {
-        height: 100%;
+        width: 80px;
+        padding: 5px 0px;
     }
     .navbar .container-fluid .phone {
         width: 150px;
@@ -959,6 +1226,17 @@ footer .footer-rights a:hover {
         height: 40px;
         width: 85%;
     }
+    .index .banner .carousel .carousel-inner .item .img-container .texto {
+        margin-bottom: 0px;
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span.big {
+        font-weight: 700;
+        font-size: 24px;
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span.small {
+        font-weight: 700;
+        font-size: 20px;
+    }
 
     /* NOSOTROS */
     .index .nosotros .container h1 {
@@ -1002,84 +1280,119 @@ footer .footer-rights a:hover {
     }
 
 
+    /***** PAGE-FAQS *****/
+    .page-faqs .faqs .titulo {
+        padding-top: 75px;
+    }
+    .page-faqs .faqs .titulo .container h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .page-faqs .faqs .container h2 {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    .page-faqs .faqs .container h3 {
+        font-size: 18px;
+    }
+    .page-faqs .faqs .container p {
+        font-size: 16px;
+    }
+
+
     /***** COTIZA-PAGE *****/
     /* BANNER */
-    .cotiza-vida .banner {
+    .cotiza-seguro .banner {
         height: 300px;
         margin-top: 50px;
     }
-    .cotiza-vida .banner .container h1 {
+    .cotiza-seguro .banner .container h1 {
         font-size: 35px;
         bottom: 15px;
     }
 
     /* CONTENIDO */
-    .cotiza-vida .contenido {
+    .cotiza-seguro .contenido {
         background: none;
         overflow: hidden;
     }
-    .cotiza-vida .contenido .container .left-side h1 {
+    .cotiza-seguro .contenido .container .left-side h1 {
         font-size: 24px;
     }
-    .cotiza-vida .contenido .container .left-side .form-container form input[type=text],
-    .cotiza-vida .contenido .container .left-side .form-container form input[type=email],
-    .cotiza-vida .contenido .container .left-side .form-container form select
+    .cotiza-seguro .contenido .container .left-side .form-container form input[type=text],
+    .cotiza-seguro .contenido .container .left-side .form-container form input[type=email],
+    .cotiza-seguro .contenido .container .left-side .form-container form select
     {
         font-weight: 500;
         font-size: 14px;
         height: 40px;
     }
-    .cotiza-vida .contenido .container .left-side .form-container form > .genero {
+    .cotiza-seguro .contenido .container .left-side .form-container form > .genero {
         height: 40px;
     }
-    .cotiza-vida .contenido .container .left-side .form-container form > .genero p {
+    .cotiza-seguro .contenido .container .left-side .form-container form > .genero p {
         font-weight: 500;
         font-size: 14px;
         line-height: 40px;
         height: 40px;
     }
-    .cotiza-vida .contenido .container .left-side .form-container form > .genero input[type=radio] {
+    .cotiza-seguro .contenido .container .left-side .form-container form > .genero input[type=radio] {
         height: 22px;
         width: 22px;
         margin-top: 10px;
     }
-    .cotiza-vida .contenido .container .left-side .form-container form > .autorizo p {
+    .cotiza-seguro .contenido .container .left-side .form-container form > .autorizo p {
         font-weight: 700;
         font-size: 11px;
     }
-    .cotiza-vida .contenido .container .left-side .form-container form input[type=submit] {
+    .cotiza-seguro .contenido .container .left-side .form-container form input[type=submit] {
         font-size: 16px;
         height: 35px;
         width: 110px;
     }
-    .cotiza-vida .contenido .container .right-side {
+    .cotiza-seguro .contenido .container .right-side {
         position: relative;
     }
-    .cotiza-vida .contenido .container .right-side img {
+    .cotiza-seguro .contenido .container .right-side img {
         position: absolute;
         min-height: 100%;
         min-width: 100%;
         top: 0;
         left: -15px;
     }
-    .cotiza-vida .contenido .container .right-side p {
+    .cotiza-seguro .contenido .container .right-side p {
         position: relative;
         font-weight: 500;
         font-size: 14px;
         padding-top: 25px;
     }
-    .cotiza-vida .contenido .container .right-side span {
+    .cotiza-seguro .contenido .container .right-side span {
         font-weight: 700;
         font-size: 16px;
     }
-    .cotiza-vida .contenido .container .left-side {
+    .cotiza-seguro .contenido .container .left-side {
         padding: 15px;
     }
-    .cotiza-vida .contenido .container .right-side {
+    .cotiza-seguro .contenido .container .right-side {
         padding: 15px;
     }
-    .cotiza-vida .contenido .container .logo {
+    .cotiza-seguro .contenido .container .logo {
         display: none;
+    }
+    .cotiza-seguro .contenido .container .left-side .form-container form .col-sm-6 {
+        padding: 0;
+    }
+    .cotiza-seguro .contenido .container .left-side .form-container form .left-side {
+        padding-right: 0px;
+    }
+    .cotiza-seguro .contenido .container .left-side .form-container form .right-side {
+        padding-left: 0px;
+    }
+    .cotiza-seguro .contenido .container .right-side table {
+        font-size: 16px;
+    }
+    .cotiza-seguro .contenido .container .right-side td, th {
+        padding: 5px;
     }
 
 
@@ -1118,6 +1431,33 @@ footer .footer-rights a:hover {
     /* BANNER */
     .index .banner .carousel .container .cotiza {
         width: 300px;
+    }
+    .index .banner .carousel .container .vertical-align {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 25px;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span:first-child {
+        font-size: 18px;
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span:nth-child(2) {
+        font-size: 26px;
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span:last-child {
+        font-size: 18px;
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span.big {
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .index .banner .carousel .carousel-inner .item .img-container .texto span.small {
+        font-weight: 700;
+        font-size: 18px;
     }
 
     /* NOSOTROS */
@@ -1170,6 +1510,24 @@ footer .footer-rights a:hover {
         font-size: 22px;
     }
 
+
+    /***** COTIZA-PAGE *****/
+    /* CONTENIDO */
+    .cotiza-seguro .contenido .container .right-side table {
+        font-size: 12px;
+    }
+    .cotiza-seguro .contenido .container .right-side td, th {
+        padding: 1px;
+    }
+    .cotiza-seguro .contenido .container .right-side .tbl-salud {
+        font-size: 10px;
+        width: 100%;
+    }
+    .cotiza-seguro .contenido .container .right-side .tbl-salud td, th {
+        text-align: left;
+        padding: 0px;
+        border: 1px solid rgba(50, 50, 50, 1);
+    }
 
     /***** PIE *****/
     .pie .container .col-xs-6,

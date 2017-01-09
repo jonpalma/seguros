@@ -14,11 +14,11 @@
                 <a class="smoothScroll" href="<?php if($page != 'index') { echo 'index.php'; }?>#nosotros">
                     NOSOTROS
                 </a>
-                <a class="smoothScroll" href="<?php if($page != 'index') { echo 'index.php'; }?>#seguros">
-                    FAQS
-                </a>
                 <a class="smoothScroll" href="<?php if($page != 'index') { echo 'index.php'; }?>#contactanos-top">
                     CONTACTO
+                </a>
+                <a class="smoothScroll" href="<?php if($page != 'faqs') { echo 'faqs.php'; }?>#faqs">
+                    FAQS
                 </a>
             </div>
         </div>
