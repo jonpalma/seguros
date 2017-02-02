@@ -7,73 +7,155 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <div class="banner" id="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="carousel-banner" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="container">
-                    <div class="vertical-align">
-                        <div class="cotiza">
-                            <h2>
-                                Cotiza fácil y rápido
-                            </h2>
-                            <p>
-                                Elige tu tipo de seguro
-                            </p>
-                            <select class="selectpicker" name="seguro" id="selectSeguro">
-                                <option value="auto">Seguro de Auto</option>
-                                <option value="salud">Seguro de Salud</option>
-                                <option value="vida">Seguro de Vida</option>
-                                <option value="hogar">Seguro de Hogar y Negocio</option>
-                            </select>
-                            <button type="button" id="bttnCotiza">COTIZA</button>
+                <div class="container form-cotiza">
+                    <div class="col-sm-6 left-side pull-right">
+                        <div class="vertical-align">
+                            <div class="cotiza">
+                                <h2>
+                                    Cotiza fácil y rápido
+                                </h2>
+                                <p>
+                                    Elige tu tipo de seguro
+                                </p>
+                                <select class="selectpicker" name="seguro" id="selectSeguro">
+                                    <option value="auto">Seguro de Auto</option>
+                                    <option value="salud">Seguro de Salud</option>
+                                    <option value="vida">Seguro de Vida</option>
+                                    <option value="hogar">Seguro de Hogar y Negocio</option>
+                                </select>
+                                <button type="button" id="bttnCotiza">COTIZA</button>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-sm-6 right-side pull-left">
                     </div>
                 </div>
                 <div class="item active">
                     <div class="img-container">
-                        <img class="banner-bg" src="img/index/banner/banner1.jpg" alt="">
-                        <div class="texto">
-                            <p>
-                                <span class="black big">EVITA PÉRDIDAS IMPREVISTAS, </span><br>
-                                <span class="white small">Protege tu auto eligiendo una cobertura que se ajuste a tu presupuesto.</span>
-                            </p>
+                        <img class="img-bg" src="img/index/banner/banner-1.jpg" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="col-sm-6 left-side pull-right">
+                        </div>
+                        <div class="col-sm-6 right-side pull-left">
+                            <div class="vertical-align">
+                                <div class="texto">
+                                    <p>
+                                        <span class="white small bold">MAS VALE PREVENIR,</span><br>
+                                        <span class="yellow big bold dotted">¡QUE LAMENTAR!</span><br>
+                                        <span class="white small normal">CONOCE NUESTRAS,</span><br>
+                                        <span class="white very-big bold">COBERTURAS</span><br>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="img-container">
-                        <img class="banner-bg" src="img/index/banner/banner2.jpg" alt="">
-                        <div class="texto">
-                            <p>
-                                <span class="red big">AUN SIGUES SIN SEGURO DE AUTO? </span><br>
-                                <span class="black small">Asegurarte es más barato y sencillo de lo que imaginas.</span>
-                            </p>
+                        <img class="img-bg" src="img/index/banner/banner-2.jpg" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="col-sm-6 left-side pull-right"></div>
+                        <div class="col-sm-6 right-side pull-left">
+                            <div class="vertical-align">
+                                <div class="texto">
+                                    <p>
+                                        <span class="white small bold">MAS VALE PREVENIR,</span><br>
+                                        <span class="yellow big bold dotted">¡NO TE ARRIESGUES!</span><br>
+                                        <span class="white small normal">ASEGURATE CON NOSOTROS</span><br>
+                                        <span class="white very-big bold">HOY MISMO</span><br>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="img-container">
-                        <img class="banner-bg" src="img/index/banner/banner3.jpg" alt="">
-                        <div class="texto">
-                            <p>
-                                <span class="red big">PROMOCIÓN: </span>
-                                <span class="white small">EN LA COMPRA DE UN SEGURO DE AUTO LLEVATE GRATIS UN SEGURO DE VIDA.</span>
-                                <span class="white small">*aplican restricciones.</span>
-                            </p>
+                        <img class="img-bg" src="img/index/banner/banner-3.jpg" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="col-sm-6 left-side pull-right"></div>
+                        <div class="col-sm-6 right-side pull-left">
+                            <div class="vertical-align">
+                                <div class="texto">
+                                    <p>
+                                        <span class="white medium bold">OBTÉN UN </span> <span class="yellow very-big bold">20%</span><br>
+                                        <span class="white medium normal">DE DESCUENTO EN SEGUROS</span><br>
+                                        <span class="white big bold">DE HOGAR O VIDA</span><br>
+                                        <span class="white very-small bold dotted">AL COMPRAR EL SEGURO DE TU AUTO</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="controls">
+                <a class="left carousel-control" href="#carousel-banner" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-banner" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
+    </div>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--/* CINTA */-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="cinta" id="cinta">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2">
+            <div class="vertical-align">
+                <img src="img/index/icons/check.png" alt="">
+                <p>
+                    ELIGE TU SEGURO
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="vertical-align">
+                <img src="img/index/icons/lista-1.png" alt="">
+                <p>
+                    LLENA TU FORMULARIO
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="vertical-align">
+                <img src="img/index/icons/crono.png" alt="">
+                <p>
+                    ESPERA A TU ASESOR
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="vertical-align">
+                <img src="img/index/icons/lista.png" alt="">
+                <p>
+                    ELIGE TU FORMA DE PAGO
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="vertical-align">
+                <img src="img/index/icons/tarjeta.png" alt="">
+                <p>
+                    REALIZA TU PAGO
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
     </div>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
@@ -217,8 +299,11 @@
             </a>
         </div>
     </div>
-    <div class="contactanos-bottom" id="contactanos-bottom">
-        <div class="container light-spacing">
+    <div class="contactanos-bottom parallax-container" id="contactanos-bottom">
+        <div class="parallax">
+            <img src="img/index/contactanos/bg2.jpg" alt="Parallax">
+        </div>
+        <div class="container spacing">
             <div class="form-container">
                 <form action="mailer.php" method="POST" id="form">
                     <input type="text" name="name" id="name" placeholder="Nombre" required="">

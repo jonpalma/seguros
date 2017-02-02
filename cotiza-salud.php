@@ -97,7 +97,7 @@
                 </div>
             </div>
             <div class="col-sm-6 right-side">
-                <img src="img/cotiza/seguros/bg.jpg" alt="" class="hidden-lg hidden-md hidden-sm">
+                <img src="img/cotiza/seguros/bg.jpg" alt="" class="img-bg hidden-lg hidden-md hidden-sm">
                 <p>
                     <span>Te asesoramos </span> para brindarte la cobertura que
                     mejor se ajuste a tus necesidades médicas, te brindamos el
@@ -108,78 +108,7 @@
                     <br>
                     Contáctanos para ofrecerte una solución personalizada.
                 </p>
-                <table class="tbl-salud">
-                    <tr>
-                        <th></th>
-                        <th>PLANES</th>
-                        <th>SALUD</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td>Cobertura Incluida</td>
-                        <td>Distinguido</td>
-                        <td>Preferente</td>
-                        <td>Especial</td>
-                        <td>Primario</td>
-                    </tr>
-                    <tr>
-                        <td>Prevención de la Salud</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Mantenimiento de la Salud</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>No aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Maternidad</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>No aplica</td>
-                        <td>No aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Servicios Aux. de Diagnóstico</td>
-                        <td>Aplica</td>
-                        <td>No aplica</td>
-                        <td>No aplica</td>
-                        <td>No aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Servicios Odontológicos</td>
-                        <td>Aplica</td>
-                        <td>No aplica</td>
-                        <td>No aplica</td>
-                        <td>No aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Hospitalización</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>No aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Asistencia Internacional en Viaje</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Emergencia en el Extranjero</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                        <td>No disponible</td>
-                    </tr>
-                </table>
+                <img class="tabla" src="img/cotiza/tablas/salud.png" alt="">
             </div>
         </div>
     </div>

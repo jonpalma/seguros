@@ -146,87 +146,14 @@
                 </div>
             </div>
             <div class="col-sm-6 right-side">
-                <img src="img/cotiza/seguros/bg.jpg" alt="" class="hidden-lg hidden-md hidden-sm">
+                <img src="img/cotiza/seguros/bg.jpg" alt="" class="img-bg hidden-lg hidden-md hidden-sm">
                 <p>
                     <span>Porque sabemos que te interesa proteger tu patrimonio, </span>
                     te ofrecemos protección a la medida para que evites sorpresas y
                     gastos imprevistos que afecten tu economía. Con nuestras coberturas
                     a la medida tu auto estará seguro a donde quiera que vayas.
                 </p>
-                <table>
-                    <tr>
-                        <th>COBERTURAS</th>
-                        <th>PLANES</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Básica</td>
-                        <td>Intermedia</td>
-                        <td>Completa</td>
-                    </tr>
-                    <tr>
-                        <td>Daños materiales</td>
-                        <td>No aplica</td>
-                        <td>No aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Robo total</td>
-                        <td>No aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Responsabilidad Civil por daños a terceros</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Gastos Médicos Ocupantes</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Defensa Legal</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Servicios de Asistencia</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Responsabilidad Civil personas en exceso</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                        <td>Aplica</td>
-                    </tr>
-                    <tr>
-                        <td>Accidentes automovilisticos al conductor</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                    </tr>
-                    <tr>
-                        <td>Extención de responsabilidad civil</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                    </tr>
-                    <tr>
-                        <td>Auto sustituto</td>
-                        <td>No aplica</td>
-                        <td>Opcional</td>
-                        <td>Opcional</td>
-                    </tr>
-                </table>
+                <img class="tabla" src="img/cotiza/tablas/coberturas.png" alt="">
                 <p>
                     <br>
                     <br>

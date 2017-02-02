@@ -30,7 +30,7 @@
                         <li><a href="<?php if($page != 'index') { echo 'index.php'; }?>#index" class="smoothScroll vertical-align nav-padd home active">Inicio</a></li>
                         <li><a href="<?php if($page != 'index') { echo 'index.php'; }?>#nosotros" class="smoothScroll vertical-align nav-padd">Nosotros</a></li>
                         <li><a href="<?php if($page != 'index') { echo 'index.php'; }?>#contactanos-top" class="smoothScroll vertical-align nav-padd">Contacto</a></li>
-                        <li><a href="<?php if($page != 'faqs') { echo 'faqs.php'; }?>#faqs" class="smoothScroll vertical-align nav-padd">FAQS</a></li>
+                        <li><a href="<?php if($page != 'faqs') { echo 'faqs.php'; }?>#faqs" class="smoothScroll vertical-align nav-padd two-lines">Preguntas<br>Frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="phone">

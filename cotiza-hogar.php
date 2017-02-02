@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-sm-6 right-side">
-                <img src="img/cotiza/seguros/bg.jpg" alt="" class="hidden-lg hidden-md hidden-sm">
+                <img src="img/cotiza/seguros/bg.jpg" alt="" class="img-bg hidden-lg hidden-md hidden-sm">
                 <p>
                     <span>Sabemos lo mucho que te importa tu casa </span> y el esfuerzo que
                     te ha costado obtenerla, con nuestros planes de protección a hogar tu

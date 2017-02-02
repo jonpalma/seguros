@@ -24,6 +24,8 @@ Text Domain: Mixen Communication & Web Technology
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 
 
 
@@ -183,6 +185,23 @@ a {
     margin-left: 15px;
 }
 
+.navbar .container-fluid .navbar-collapse .navbar-nav > li::after {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 2px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav > li:last-child::after {
+    display: none;
+}
+
 .navbar .container-fluid .navbar-collapse .navbar-nav > li {
     height: 40px;
     margin-top: 20px;
@@ -199,10 +218,15 @@ a {
     -moz-transition: all 300ms ease;
 }
 
+.navbar .container-fluid .navbar-collapse .navbar-nav > li > a.two-lines {
+    font-size: 12px;
+    line-height: 12px;
+}
+
 .navbar .container-fluid .navbar-collapse .navbar-nav > li:hover > a,
 .navbar .container-fluid .navbar-collapse .navbar-nav > li:focus > a,
 .navbar .container-fluid .navbar-collapse .navbar-nav > li > a.active {
-    color: rgba(20, 86, 167, 1)!important;
+    color: rgba(234, 0, 0, 1)!important;
     background-color: transparent!important;
 }
 
@@ -237,7 +261,7 @@ a {
 
 .index .banner .carousel .carousel-inner .item .img-container img {
     position: relative;
-    height: 100%;
+    min-height: 100%;
     min-width: 100%;
     max-width: none;
     left: 50%;
@@ -246,26 +270,55 @@ a {
     -moz-transform: translateX(-50%);
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .texto {
-    position: absolute;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    bottom: 0;
-    margin-bottom: 15px;
+.index .banner .carousel .carousel-inner .item .texto {
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    line-height: 28px;
+    width: calc(100% - 50px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .texto span.big {
-    font-weight: 700;
-    font-size: 34px;
+.index .banner .carousel .carousel-inner .item .texto span {
+    display: inline-block;
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .texto span.small {
+.index .banner .carousel .carousel-inner .item .texto span.bold {
     font-weight: 700;
+}
+
+.index .banner .carousel .carousel-inner .item span.normal {
+    font-weight: 500;
+}
+
+.index .banner .carousel .carousel-inner .item .texto span.very-big {
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.index .banner .carousel .carousel-inner .item .texto span.big {
+    font-size: 44px;
+    line-height: 44px;
+}
+
+.index .banner .carousel .carousel-inner .item .texto span.medium {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.index .banner .carousel .carousel-inner .item .texto span.small {
     font-size: 28px;
+    line-height: 28px;
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .texto span.black {
+.index .banner .carousel .carousel-inner .item .texto span.very-small {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.index .banner .carousel .carousel-inner .item .texto span.border-black {
     font-weight: 700;
     font-size: 34px;
     color: rgba(0, 0, 0, 1);
@@ -279,7 +332,7 @@ a {
         -1px 1px 0 #fff;
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .texto span.red {
+.index .banner .carousel .carousel-inner .item .texto span.border-red {
     color: rgba(234, 0, 0, 1);
     text-shadow: 1px 0 0 #fff,
         -1px 0 0 #fff,
@@ -291,12 +344,22 @@ a {
         -1px 1px 0 #fff;
 }
 
-.index .banner .carousel .carousel-inner .item .img-container .texto span.white {
+.index .banner .carousel .carousel-inner .item .texto span.white {
     color: rgba(255, 255, 255, 1);
 }
 
+.index .banner .carousel .carousel-inner .item .texto span.yellow {
+    color: rgba(249, 225, 5, 1);
+}
+
+.index .banner .carousel .carousel-inner .item .texto span.dotted {
+    border-bottom: 3px dotted rgba(249, 225, 5, 1);
+    margin-bottom: 5px;
+}
+
 .index .banner .carousel .carousel-control {
-    z-index: 1
+    z-index: 1;
+    width: 50px;
 }
 
 .index .banner .carousel .container {
@@ -308,18 +371,21 @@ a {
     z-index: 1;
 }
 
+.index .banner .carousel .container .col-sm-6 {
+    height: 100%;
+}
+
 .index .banner .carousel .container .cotiza {
-    position: relative;
     text-align: center;
     height: 250px;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     left: 0;
     right: 0;
     margin: 0 auto;
     padding: 10px 25px;
     border-radius: 8px;
-    background: url(img/index/banner/cotiza-bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-color: rgba(249, 255, 5, 0.67);
 }
 
 .index .banner .carousel .container .cotiza h2,
@@ -342,6 +408,11 @@ a {
     color: rgba(255, 255, 255, 1);
 }
 
+.index .banner .carousel .container .cotiza h2,
+.index .banner .carousel .container .cotiza p {
+    color: rgba(40, 40, 40, 1);
+}
+
 .index .banner .carousel .container .cotiza p,
 .index .banner .carousel .container .cotiza select {
     font-family: 'Montserrat', sans-serif;
@@ -350,7 +421,6 @@ a {
 }
 
 .index .banner .carousel .container .cotiza p {
-    color: rgba(255, 255, 255, 1);
     margin-bottom: 25px;
 }
 
@@ -371,9 +441,100 @@ a {
 }
 
 
+/* CINTA */
+.index .cinta {
+    text-align: center;
+    height: 175px;
+}
+
+.index .cinta .col-xs-1,
+.index .cinta .col-xs-2 {
+    position: relative;
+    height: 100%;
+}
+
+.index .cinta .col-xs-1 {
+    width: 0;
+    padding: 0;
+}
+
+.index .cinta .col-xs-2 {
+    width: 20%;
+    padding: 15px;
+}
+
+.index .cinta .col-xs-2 img {
+    height: 65px;
+    width: 65px;
+    margin-bottom: 10px;
+}
+
+.index .cinta .col-xs-2 p {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.index .cinta .col-xs-2:nth-of-type(2),
+.index .cinta .col-xs-2:nth-of-type(2)::after {
+    background-color: rgba(0, 46, 113, 1);
+}
+
+.index .cinta .col-xs-2:nth-of-type(3),
+.index .cinta .col-xs-2:nth-of-type(3)::after {
+    background-color: rgba(22, 102, 211, 1);
+}
+
+.index .cinta .col-xs-2:nth-of-type(4),
+.index .cinta .col-xs-2:nth-of-type(4)::after {
+    background-color: rgba(79, 150, 246, 1);
+}
+
+.index .cinta .col-xs-2:nth-of-type(5),
+.index .cinta .col-xs-2:nth-of-type(5)::after {
+    background-color: rgba(116, 106, 215, 1);
+}
+
+.index .cinta .col-xs-2:nth-of-type(6) {
+    background-color: rgba(67, 52, 223, 1);
+}
+
+.index .cinta .col-xs-2:nth-of-type(2)::after,
+.index .cinta .col-xs-2:nth-of-type(3)::after,
+.index .cinta .col-xs-2:nth-of-type(4)::after,
+.index .cinta .col-xs-2:nth-of-type(5)::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 24px;
+    width: 24px;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+
 /* NOSOTROS */
 .index .nosotros {
+    position: relative;
     background: url(img/index/nosotros/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .nosotros::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 80px;
+    width: 80px;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: url(img/index/icons/btn-yellow.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -485,8 +646,23 @@ a {
 
 /* CONTACTANOS */
 .index .contactanos-top {
+    position: relative;
     text-align: center;
     background: url(img/index/contactanos/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.index .contactanos-top::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 80px;
+    width: 64px;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: url(img/index/icons/pin.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -539,11 +715,6 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
-.index .contactanos-bottom {
-    background: url(img/index/contactanos/bg2.jpg) no-repeat center center;
-    background-size: cover;
-}
-
 .index .contactanos-bottom .container .form-container form {
     text-align: center;
 }
@@ -594,6 +765,19 @@ a {
 
 
 /***** PAGE-FAQS *****/
+.page-faqs .faqs::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(img/index/faqs/bg.jpg) no-repeat fixed center;
+    background-size: cover;
+    will-change: transform;
+    z-index: -1;
+}
+
 .page-faqs .faqs .titulo {
     padding-top: 125px;
     background: url(img/index/seguros/bg.jpg) no-repeat center center;
@@ -615,17 +799,30 @@ a {
     padding-right: 15px;
 }
 
+.page-faqs .faqs .container .panel-group .panel .panel-heading {
+    background: url(img/index/icons/nav-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.page-faqs .faqs .container .panel-group .panel .panel-collapse .panel-body {
+
+}
+
 .page-faqs .faqs .container h2,
 .page-faqs .faqs .container h3,
 .page-faqs .faqs .container p {
     font-family: 'Cocogoose', sans-serif;
     font-weight: 500;
-    color: rgba(70, 70, 70, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.page-faqs .faqs .container h3 {
+    color: rgba(255, 255, 255, 1);
 }
 
 .page-faqs .faqs .container h2 {
     font-size: 26px;
-    color: rgba(20, 86, 167, 1);
+    color: rgba(0, 37, 97, 1);
     margin-top: 50px;
 }
 
@@ -816,7 +1013,6 @@ a {
     margin-top: 15px;
 }
 
-
 .cotiza-seguro .contenido .container .right-side {
     font-family: 'Avian', sans-serif;
 }
@@ -829,75 +1025,12 @@ a {
 
 .cotiza-seguro .contenido .container .right-side span {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
 }
 
-.cotiza-seguro .contenido .container .right-side span.bold {
-    font-weight: 700;
-    font-size: 20px;
-    color: rgba(15, 15, 15, 1);
-}
-
-.cotiza-seguro .contenido .container .right-side table {
-    position: relative;
-    font-family: 'Avian', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 1);
+.cotiza-seguro .contenido .container .right-side .tabla {
+    height: auto;
     width: 100%;
-    margin-top: 25px;
-    border-collapse: collapse;
-}
-
-.cotiza-seguro .contenido .container .right-side td, th {
-    text-align: left;
-    padding: 5px;
-    border: 1px solid rgba(50, 50, 50, 1);
-}
-
-.cotiza-seguro .contenido .container .right-side tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.cotiza-seguro .contenido .container .right-side tr:nth-child(2) {
-    background-color: transparent;
-}
-
-.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(1) {
-    border: 0px solid;
-}
-
-.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(2) {
-    border-right: 0px solid;
-}
-
-.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(3) {
-    border-left: 0px solid;
-    border-right: 0px solid;
-}
-
-.cotiza-seguro .contenido .container .right-side tr:nth-child(1) > th:nth-child(4) {
-    border-left: 0px solid;
-}
-
-.cotiza-seguro .contenido .container .right-side .tbl-salud tr:nth-child(1) > th:nth-child(4) {
-    border-left: 0px solid;
-    border-right: 0px solid;
-}
-
-.cotiza-seguro .contenido .container .right-side .tbl-salud tr:nth-child(1) > th:nth-child(5) {
-    border-left: 0px solid;
-}
-
-.cotiza-seguro .contenido .container .right-side .tbl-salud {
-    font-size: 15px;
-    width: 100%;
-}
-
-.cotiza-seguro .contenido .container .right-side .tbl-salud td, th {
-    text-align: left;
-    padding: 2px;
-    border: 1px solid rgba(50, 50, 50, 1);
 }
 
 .cotiza-seguro .contenido .container .left-side {
@@ -1105,29 +1238,8 @@ footer .footer-rights a:hover {
         padding: 18px 0px;
     }
     .navbar .container-fluid .navbar-collapse .navbar-nav > li > a {
-        padding: 5px 8px;
-    }
-
-
-    /***** COTIZA-PAGE *****/
-    /* CONTENIDO */
-    .cotiza-seguro .contenido .container .right-side table {
         font-size: 12px;
-        width: 100%;
-    }
-    .cotiza-seguro .contenido .container .right-side td, th {
-        text-align: left;
-        padding: 2px;
-        border: 1px solid rgba(50, 50, 50, 1);
-    }
-    .cotiza-seguro .contenido .container .right-side .tbl-salud {
-        font-size: 11px;
-        width: 100%;
-    }
-    .cotiza-seguro .contenido .container .right-side .tbl-salud td, th {
-        text-align: left;
-        padding: 1px;
-        border: 1px solid rgba(50, 50, 50, 1);
+        padding: 5px 5px;
     }
 }
 
@@ -1183,18 +1295,29 @@ footer .footer-rights a:hover {
         text-align: center;
         height: auto;
         border: none;
-        background-color: rgba(0, 174, 228, 0.5);
+        background-color: rgba(0, 37, 97, 0.5);
     }
     .navbar .container-fluid .navbar-collapse .navbar-nav {
         position: relative;
         height: auto;
-        margin-top: 20px;
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav > li::after {
+        display: none;
     }
     .navbar .container-fluid .navbar-collapse .navbar-nav > li {
         height: auto;
-        margin-top: 5px;
+        margin-top: 6px;
     }
     .navbar .container-fluid .navbar-collapse .navbar-nav > li > a {
+        font-size: 14px;
+        padding: 3px 0px;
+        top: 0;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+    }
+    .navbar .container-fluid .navbar-collapse .navbar-nav > li > a.two-lines {
+        line-height: 16px;
         font-size: 14px;
         padding: 3px 0px;
     }
@@ -1205,6 +1328,9 @@ footer .footer-rights a:hover {
     .index .banner .carousel {
         height: calc(100vh - 50px);
         top: 50px;
+    }
+    .index .banner .col-sm-6 {
+        height: calc(50% - 25px)!important;
     }
     .index .banner .carousel .container .cotiza h2,
     .index .banner .carousel .container .cotiza button {
@@ -1226,16 +1352,59 @@ footer .footer-rights a:hover {
         height: 40px;
         width: 85%;
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto {
-        margin-bottom: 0px;
+    .index .banner .carousel .carousel-inner .item .texto span.very-big {
+        font-size: 40px;
+        line-height: 40px;
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span.big {
-        font-weight: 700;
-        font-size: 24px;
+    .index .banner .carousel .carousel-inner .item .texto span.big {
+        font-size: 34px;
+        line-height: 34px;
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span.small {
-        font-weight: 700;
-        font-size: 20px;
+    .index .banner .carousel .carousel-inner .item .texto span.medium {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .index .banner .carousel .carousel-inner .item .texto span.small {
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .index .banner .carousel .carousel-inner .item .texto span.very-small {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .index .left-side,
+    .index .right-side {
+        float: none!important;
+    }
+    .index .banner .carousel .carousel-inner .item .texto {
+        text-align: center;
+    }
+
+    /* CINTA */
+    .index .cinta {
+        height: 125px;
+    }
+    .index .cinta .col-xs-1,
+    .index .cinta .col-xs-2 {
+        position: relative;
+        height: 100%;
+    }
+    .index .cinta .col-xs-2 {
+        width: 20%;
+        padding: 5px;
+    }
+    .index .cinta .col-xs-2 img {
+        height: 40px;
+        width: 40px;
+    }
+    .index .cinta .col-xs-2 p {
+        font-size: 10px;
+    }
+    .index .cinta .col-xs-2:nth-of-type(2)::after,
+    .index .cinta .col-xs-2:nth-of-type(3)::after,
+    .index .cinta .col-xs-2:nth-of-type(4)::after,
+    .index .cinta .col-xs-2:nth-of-type(5)::after {
+        display: none;
     }
 
     /* NOSOTROS */
@@ -1353,7 +1522,7 @@ footer .footer-rights a:hover {
     .cotiza-seguro .contenido .container .right-side {
         position: relative;
     }
-    .cotiza-seguro .contenido .container .right-side img {
+    .cotiza-seguro .contenido .container .right-side .img-bg {
         position: absolute;
         min-height: 100%;
         min-width: 100%;
@@ -1388,29 +1557,41 @@ footer .footer-rights a:hover {
     .cotiza-seguro .contenido .container .left-side .form-container form .right-side {
         padding-left: 0px;
     }
-    .cotiza-seguro .contenido .container .right-side table {
-        font-size: 16px;
-    }
-    .cotiza-seguro .contenido .container .right-side td, th {
-        padding: 5px;
+    .cotiza-seguro .contenido .container .right-side .tabla {
+        position: relative;
     }
 
 
     /***** PIE *****/
+    .pie .container {
+        text-align: center;
+        padding: 50px 10px;
+    }
     .pie .container .col-xs-6,
     .pie .container .col-xs-3 {
-        height: 150px;
+        height: auto;
+    }
+    .pie .container .col-xs-6 .vertical-align,
+    .pie .container .col-xs-3 .vertical-align {
+        top: 0;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
     }
     .pie .container .left-side .content a {
         font-size: 12px;
     }
+    .pie .container .right-side {
+        width: 150px;
+    }
     .pie .container .right-side .col-xs-6 {
         height: 50px;
+        width: 50px;
         padding: 5px;
     }
     .pie .container .right-side .col-xs-6 img {
-        max-height: 100%;
-        max-width: 100%;
+        height: 35px;
+        width: 35px;
     }
 }
 
@@ -1429,35 +1610,43 @@ footer .footer-rights a:hover {
 
     /****** INDEX ******/
     /* BANNER */
-    .index .banner .carousel .container .cotiza {
-        width: 300px;
-    }
     .index .banner .carousel .container .vertical-align {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 25px;
+        position: relative;
+        height: 100%;
+        top: 0;
         transform: translateY(0);
         -webkit-transform: translateY(0);
         -moz-transform: translateY(0);
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span:first-child {
-        font-size: 18px;
+    .index .banner .carousel .carousel-inner .item .texto span.very-big {
+        font-size: 28px;
+        line-height: 28px;
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span:nth-child(2) {
-        font-size: 26px;
+    .index .banner .carousel .carousel-inner .item .texto span.big {
+        font-size: 24px;
+        line-height: 24px;
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span:last-child {
-        font-size: 18px;
-    }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span.big {
-        font-weight: 700;
+    .index .banner .carousel .carousel-inner .item .texto span.medium {
         font-size: 22px;
+        line-height: 22px;
     }
-    .index .banner .carousel .carousel-inner .item .img-container .texto span.small {
-        font-weight: 700;
+    .index .banner .carousel .carousel-inner .item .texto span.small {
         font-size: 18px;
+        line-height: 18px;
+    }
+    .index .banner .carousel .carousel-inner .item .texto span.very-small {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .index .banner .carousel .cotiza {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .index .banner .carousel .carousel-inner .item .texto {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
     }
 
     /* NOSOTROS */
@@ -1510,39 +1699,12 @@ footer .footer-rights a:hover {
         font-size: 22px;
     }
 
-
-    /***** COTIZA-PAGE *****/
-    /* CONTENIDO */
-    .cotiza-seguro .contenido .container .right-side table {
-        font-size: 12px;
-    }
-    .cotiza-seguro .contenido .container .right-side td, th {
-        padding: 1px;
-    }
-    .cotiza-seguro .contenido .container .right-side .tbl-salud {
-        font-size: 10px;
-        width: 100%;
-    }
-    .cotiza-seguro .contenido .container .right-side .tbl-salud td, th {
-        text-align: left;
-        padding: 0px;
-        border: 1px solid rgba(50, 50, 50, 1);
-    }
-
     /***** PIE *****/
-    .pie .container .col-xs-6,
-    .pie .container .col-xs-3 {
-        height: 150px;
-    }
     .pie .container .left-side .content a {
         font-size: 12px;
     }
     .pie .container .right-side .col-xs-6 {
         height: 50px;
         padding: 5px;
-    }
-    .pie .container .right-side .col-xs-6 img {
-        max-height: 100%;
-        max-width: 100%;
     }
 }
